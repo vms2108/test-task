@@ -1,2 +1,4 @@
-<app-first-type></app-first-type>
-<app-second-type></app-second-type>
+<app-first-type *ngIf="variant?.type==='FirstType'"></app-first-type>
+<app-second-type *ngIf="variant?.type==='SecondType'"></app-second-type>
+<app-countdown></app-countdown>
+

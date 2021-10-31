@@ -21,4 +21,13 @@ export class VariantService {
     return new Variant('SecondType', 'Купите наш продукт за ', 100, 'RUB');
   }
 
+  public getCurrency(currencyAbbreviation: string): string {
+    const currencyes = [
+      { abbreviation: 'USD', sign: '$' },
+      { abbreviation: 'RUB', sign: '₽' }
+    ];
+
+    return currencyes.find(e => e.abbreviation === currencyAbbreviation).sign;
+  }
+
 }
